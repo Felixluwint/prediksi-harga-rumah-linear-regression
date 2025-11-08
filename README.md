@@ -1,9 +1,3 @@
-Siap 💪 ini langsung teks **README.md versi profesional full**, tinggal kamu **copy–paste ke file `README.md`** di repo kamu tanpa ubah apa pun.
-Udah ada badge, struktur lengkap, dan tampilan modern — tinggal tempel aja ke file kamu 👇
-
----
-
-````markdown
 <div align="center">
 
 # 🏠 Prediksi Harga Rumah Menggunakan Linear Regression  
@@ -156,18 +150,3 @@ Made with ❤️ by **Felix Luwinta** & **Constantin Anggriano**
 Universitas ✨ — 2025
 
 📎 [GitHub Repository](https://github.com/felixluwint/prediksi-harga-rumah-linear-regression)
-
----
-
-````
-
----
-
-📍 Setelah kamu paste ke `README.md`, tinggal jalankan:
-```bash
-git add README.md
-git commit -m "Update README.md versi profesional"
-git push
-````
-
-GitHub kamu langsung tampil keren kayak portfolio engineer beneran 🚀
