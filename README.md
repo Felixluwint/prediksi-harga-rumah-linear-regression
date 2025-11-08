@@ -128,7 +128,7 @@ Prediksi Harga Rumah: Rp 620.000.000
 📽️ Link video demo dapat dilihat pada:
 
 ```
-video/link_video.txt
+[video/link_video.txt](https://youtu.be/JEWf_2L6n5k)
 ```
 
 Atau unggah ke YouTube dan tambahkan tautan di sini:
