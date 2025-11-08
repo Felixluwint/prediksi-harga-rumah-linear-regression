@@ -1,94 +1,173 @@
-# Prediksi Harga Rumah Menggunakan Linear Regression
-
-**Anggota Kelompok**
-
-- Felix Luwinta (221111259)
-- Constantin Anggriano (221112405)
+Siap 💪 ini langsung teks **README.md versi profesional full**, tinggal kamu **copy–paste ke file `README.md`** di repo kamu tanpa ubah apa pun.
+Udah ada badge, struktur lengkap, dan tampilan modern — tinggal tempel aja ke file kamu 👇
 
 ---
 
-## Deskripsi Singkat
-Proyek ini membuat model Linear Regression untuk memprediksi harga rumah berdasarkan fitur: `sqft` (luas), `bedrooms`, `bathrooms`, `lot_size`, dan `year_built`.
+````markdown
+<div align="center">
 
-Model dilatih pada dataset sintetis (dihasilkan oleh script) dan disajikan melalui aplikasi web sederhana (frontend + backend Flask). Frontend menampilkan form input, hasil prediksi, dan grafik perbandingan.
+# 🏠 Prediksi Harga Rumah Menggunakan Linear Regression  
 
----
+📊 _Proyek Machine Learning untuk memprediksi harga rumah berbasis data properti_
 
-## Struktur Repository (sesuai format tugas)
+[![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)](https://www.python.org/)
+[![Flask](https://img.shields.io/badge/Flask-Framework-black?logo=flask)](https://flask.palletsprojects.com/)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-orange?logo=scikitlearn)](https://scikit-learn.org/)
+[![GitHub repo](https://img.shields.io/badge/GitHub-Repository-181717?logo=github)](https://github.com/felixluwint/prediksi-harga-rumah-linear-regression)
+[![Status](https://img.shields.io/badge/Status-Active-success)](#)
 
-```
-frontend/            # kode frontend (HTML, CSS, JS)
-backend/             # kode backend (Flask), data, model
-video/               # simpan file video demo (MP4) atau link
-README.md            # dokumentasi utama
-train_model.py       # script training (root)
-backend/data/        # script generate dataset & csv
-backend/model/       # model.pkl & scaler.pkl (setelah training)
-```
+</div>
 
 ---
 
-## Cara Instal & Menjalankan (Lingkungan Lokal)
+## 👨‍🎓 Anggota Kelompok
+| Nama Lengkap | NIM |
+|---------------|------|
+| **Felix Luwinta** | 221111259 |
+| **Constantin Anggriano** | 221112405 |
 
-1. Pastikan Python 3.10+ terinstall.
-2. Extract repo dan buka terminal di folder proyek.
-3. (Opsional tapi direkomendasikan) Buat virtual environment:
+---
+
+## 🎯 Deskripsi Proyek
+Proyek ini bertujuan untuk membangun **model Machine Learning Linear Regression** yang mampu memprediksi harga rumah berdasarkan beberapa parameter properti seperti:
+
+- Luas Tanah (m²)
+- Luas Bangunan (m²)
+- Jumlah Kamar Tidur
+- Jumlah Kamar Mandi
+- Skor Lokasi
+
+Model ini diintegrasikan dengan **Flask** sebagai backend API dan **HTML + JavaScript** untuk tampilan antarmuka pengguna (frontend).
+
+---
+
+## ⚙️ Fitur Utama
+✅ Prediksi harga rumah berbasis input pengguna  
+✅ Model dilatih dengan dataset simulasi (fitur relevan properti)  
+✅ Aplikasi berbasis web, dapat dijalankan lokal  
+✅ Tampilan user-friendly dan responsif  
+✅ Kode terstruktur dan mudah dikembangkan  
+
+---
+
+## 🧠 Teknologi yang Digunakan
+| Komponen | Teknologi |
+|-----------|------------|
+| Bahasa Pemrograman | Python 3.x |
+| Framework Backend | Flask |
+| Machine Learning | scikit-learn (Linear Regression) |
+| Library Tambahan | NumPy, Joblib |
+| Frontend | HTML, CSS, JavaScript |
+| Kontrol Versi | Git & GitHub |
+
+---
+
+## 🛠️ Cara Instalasi dan Menjalankan Proyek
+
+### 1️⃣ Clone Repository
+```bash
+git clone https://github.com/felixluwint/prediksi-harga-rumah-linear-regression.git
+cd prediksi-harga-rumah-linear-regression
+````
+
+### 2️⃣ Install Dependencies
 
 ```bash
-python -m venv venv
-# Windows:
-venv\\Scripts\\activate
-# mac/linux:
-source venv/bin/activate
+cd backend
+pip install -r requirements.txt
 ```
 
-4. Install dependency untuk backend:
+### 3️⃣ Jalankan Backend Flask
+
 ```bash
-pip install -r backend/requirements.txt
+python app.py
 ```
 
-5. Generate dataset (jika belum ada):
-```bash
-python backend/data/generate_and_save_data.py
+Jika berhasil, akan muncul pesan:
+
+```
+ * Running on http://127.0.0.1:5000
 ```
 
-6. Train model:
-```bash
-python train_model.py
+### 4️⃣ Buka Aplikasi di Browser
+
+```
+http://127.0.0.1:5000
 ```
 
-7. Jalankan aplikasi Flask (server + frontend static):
-```bash
-python backend/app.py
-```
-
-8. Buka browser: `http://localhost:5000` — gunakan form untuk prediksi.
+Masukkan data seperti **luas tanah, luas bangunan, kamar tidur, kamar mandi, dan skor lokasi** → klik tombol **Prediksi Harga**.
 
 ---
 
-## Petunjuk Penggunaan Aplikasi
-- Masukkan nilai fitur pada form (sqft, bedrooms, bathrooms, lot_size, year_built).
-- Klik **Prediksi** untuk melihat estimasi harga.
-- Klik **Preview Data** untuk melihat sample dataset.
-- Klik **Retrain** untuk melatih ulang model dari `backend/data/housing.csv`.
+## 📦 Struktur Folder
+
+```
+house_price_lr_full/
+│
+├── backend/
+│   ├── app.py
+│   ├── requirements.txt
+│   └── model/
+│       ├── model.pkl
+│       └── scaler.pkl
+│
+├── frontend/
+│   └── index.html
+│
+├── train_model.py
+├── README.md
+└── video/link_video.txt
+```
 
 ---
 
-## Kriteria Penilaian (yang dipenuhi)
-- Folder FE & BE lengkap.
-- Dokumentasi `README.md` berisi instruksi instalasi & penggunaan.
-- Model AI dan proses training & evaluasi tersedia.
-- Aplikasi berjalan secara lokal dan terintegrasi.
+## 📊 Contoh Hasil Prediksi
+
+```
+Prediksi Harga Rumah: Rp 620.000.000
+```
 
 ---
 
-## Catatan Teknis & Pembatasan
-- Data dibuat sintetis untuk keperluan demo; tidak representatif untuk aplikasi produksi.
-- Untuk produksi, diperlukan validasi data, fitur engineering, dan model kompleks.
-- Jangan upload `backend/model/model.pkl` ke repo publik jika menggunakan data sensitif.
+## 🎥 Demo Video
+
+📽️ Link video demo dapat dilihat pada:
+
+```
+video/link_video.txt
+```
+
+Atau unggah ke YouTube dan tambahkan tautan di sini:
+➡️ [Tonton Demo di YouTube](https://youtube.com)
 
 ---
 
-## Link Video & Submission
-Letakkan file video (MP4) di folder `video/` atau ganti isi `video/link_video.txt` dengan link YouTube/Drive.
+## 💡 Catatan
 
+* Pastikan Python sudah terinstall.
+* Jalankan `pip install flask flask-cors numpy scikit-learn joblib` jika ada error missing library.
+* Proyek ini dibuat untuk keperluan **akademik dan pembelajaran Machine Learning**.
+
+---
+
+## 👨‍💻 Kontributor
+
+Made with ❤️ by **Felix Luwinta** & **Constantin Anggriano**
+Universitas ✨ — 2025
+
+📎 [GitHub Repository](https://github.com/felixluwint/prediksi-harga-rumah-linear-regression)
+
+---
+
+````
+
+---
+
+📍 Setelah kamu paste ke `README.md`, tinggal jalankan:
+```bash
+git add README.md
+git commit -m "Update README.md versi profesional"
+git push
+````
+
+GitHub kamu langsung tampil keren kayak portfolio engineer beneran 🚀
