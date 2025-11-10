@@ -1,0 +1,34 @@
+name: CI/CD Prediksi Harga Rumah
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout kode
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Instal dependensi
+        run: |
+          cd backend
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Build Docker image
+        run: |
+          cd backend
+          docker build -t prediksi-rumah .
+
+      - name: Jalankan container (cek berhasil)
+        run: |
+          docker run -d -p 5000:5000 prediksi-rumah
+          echo "✅ Container berhasil dijalankan"
